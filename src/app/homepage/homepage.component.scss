@@ -1,0 +1,417 @@
+* {
+  margin: 0;
+}
+
+/* Navbar Styles Code Starts Here */
+
+mat-toolbar {
+  background-color: #7209b7;
+  height: 38px;
+  position: relative;
+  right: 0px;
+  box-shadow: 0 5px 5px 0 rgb(56, 55, 57);
+}
+
+mat-sidenav {
+  background-color: #7209b7;
+  width: 230px;
+}
+
+.mobile-view-nav-bar-width {
+  width: 1000px;
+  height: 68px;
+}
+
+.follow-scroller-desktop {
+  position: fixed;
+  height: 60px;
+  top: 0;
+  z-index: 1030;
+  /* to prevent the navbar getting covered up by other content */
+}
+
+.follow-scroller-mobile {
+  position: fixed;
+  top: 0;
+  z-index: 1030;
+}
+
+.active,
+.btn:hover {
+  background-color: #360243;
+  outline: none !important;
+  box-shadow: none;
+}
+
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #7209b7;
+  --bs-btn-border-color: #7209b7;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #360243;
+  --bs-btn-hover-border-color: #7209b7;
+  --bs-btn-focus-shadow-rgb: 135, 46, 194;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #7209b7;
+  --bs-btn-active-border-color: #7209b7;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #7209b7;
+  --bs-btn-disabled-border-color: #7209b7;
+  z-index: 1030;
+  position: relative;
+}
+
+/* Navbar Styles Code Ends Here */
+
+
+/*Styles For Nav Items Starts Here */
+
+nav {
+  margin: -35px;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  float: left;
+  transition: .3s;
+}
+
+.buttons {
+  position: fixed;
+  right: 10px;
+  top: 9px;
+}
+
+
+.logo-desktop {
+  border-radius: 6.25rem;
+  position: absolute;
+  height: 46px;
+  top: 6px;
+  left: 50px;
+
+  width: 50px;
+  height: 45px;
+  filter:
+    drop-shadow(2px 4px 4px #0006);
+  transition: 0.2s;
+  user-select: none;
+}
+
+.logo-desktop:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.logo-mobile {
+  border-radius: 6.25rem;
+  position: fixed;
+  height: 32px;
+  top: 11px;
+
+  width: 50px;
+  height: 45px;
+  filter:
+    drop-shadow(2px 4px 4px #0006);
+  transition: 0.2s;
+  user-select: none;
+}
+
+.logo-mobile:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.digitalClock {
+  position: relative;
+  bottom: 50px;
+  left: 340px;
+  display: flex;
+  flex: 1 1 auto;
+  padding: 0 14px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+}
+
+.dayTitle {
+  margin-bottom: 10px;
+}
+
+.digitalTime {
+  display: flex;
+  height: 30px;
+}
+
+
+.ampm {
+  font-size: 16px;
+  position: relative;
+  left: 1px;
+}
+
+.digitalClock-mobile {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+}
+
+.digitalTime-mobile {
+  display: flex;
+  height: 22px;
+}
+
+/* Styles For Nav Items Ends Here */
+
+
+//============================================================================================================================
+.background {
+  min-height: 100vh; // This prevents white space below your background
+  //background-color: black;
+}
+
+.last-update {
+  z-index: 1030;
+  color: white;
+  position: relative;
+}
+
+.tech-stack {
+  text-align: center;
+  z-index: 1030;
+  color: white;
+  position: relative;
+}
+
+.mat-toolbar-service-title {
+  z-index: 1030;
+  color: white;
+  position: relative;
+  height: 100px;
+  background-color: #360243;
+}
+
+//============================================================================================================================
+
+
+//Intro section code starts here
+
+.word {
+  margin: auto;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  left: 25%;
+  font-size: 26px;
+  font-weight: 550;
+  z-index: 9999;
+}
+
+.about-card {
+  padding: 16px;
+  color: white;
+  background-color: #7e24b9;
+  text-align: justify;
+  z-index: 1030;
+  position: relative;
+}
+
+
+// SERVICES CARD CODE STARTS
+
+.xlarge-font {
+  color: #fff
+}
+
+.container {
+  padding: 64px;
+  z-index: 1030;
+  color: white;
+  position: relative;
+}
+
+/* Clear floats */
+.row:after {
+  content: "";
+  display: table;
+  clear: both
+}
+
+/* 2/3 column */
+.column-66 {
+  float: left;
+  width: 66.66666%;
+  padding: 20px;
+}
+
+/* 1/3 column */
+.column-33 {
+  float: left;
+  width: 33.33333%;
+  padding-right: 50px;
+}
+
+/* Add responsiveness - make the columns appear on top of each other instead of next to each other on small screens */
+@media screen and (max-width: 1000px) {
+
+  .column-66,
+  .column-33 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.backend-word {
+  position: absolute;
+  right: 10px;
+}
+
+//this automatically adjust to fit the size of the screen.
+// This code is used both my services and technologies
+.responsive-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+}
+
+.responsive-image-info-tech {
+  width: 130%;
+  height: 100%;
+  border-radius: 1rem;
+}
+
+.center {
+  text-align: center;
+}
+
+.center-offer-service {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+mat-progress-bar {
+  z-index: 1030;
+  position: relative;
+}
+
+.btn {
+  z-index: 1030;
+  position: relative;
+  color: white;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.limitTextHeight {
+  height: 100px;
+  overflow: hidden;
+}
+
+
+//TECHONOLOGIES CODE STARTS====================================================================================================
+
+/* The flip card container - set the width and height to whatever you want. 
+// We have added the border property to demonstrate that the flip itself goes 
+// out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  z-index: 1030;
+  color: white;
+  position: relative;
+  border-radius: 1rem;
+  /* Remove this if you don't want the 3D effect */
+}
+
+@media screen and (max-width: 100px) {
+  .fourth-flip-card {
+    position: relative;
+    right: 10px;
+  }
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  width: 100%;
+  height: 80%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 36px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+}
+
+// /* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+
+// /* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+}
+
+//* Style the back side */
+.flip-card-back {
+  background-color: #7209b7;
+  color: white;
+  transform: rotateY(180deg);
+  padding: 1rem;
+  text-align: center;
+}
+
+
+// SOCIAL MEDIA BUTTONS starts here========================================================================================================
+
+.fa {
+  padding: 12px;
+  font-size: 30px;
+  width: 62px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+.bi-linkedin {
+  color: white;
+}
+
+.bi-instagram {
+  color: white;
+}
+
+.bi-github {
+  color: white;
+}
+
+.social-text {
+  color: white;
+}
+
+.my-name {
+  color: white;
+  padding: 10px;
+}
+
+// SOCIAL MEDIA BUTTONS code ends here =========================================================================================

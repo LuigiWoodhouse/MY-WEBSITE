@@ -1,0 +1,28 @@
+1. npm install -g @angular/cli 
+   - You need to install angular globally before you can write your face angular project
+
+2. ng add @angular/material
+   - this allows you to use angular's built in libraries
+
+3. npm install bootstrap
+   - This is your css framework
+
+4. npm install @angular/flex-layout --save
+   - This was needed for nav bar, menu icon 
+   - import { FlexLayoutModule } from '@angular/flex-layout';
+
+5. npm i mdb-ui-kit
+   -For buttons to collapse in navbar(THIS DID NOT COLLAPSE NAV ITEMS in center)
+
+6. npm uninstall mdb-ui-kit
+   -For buttons to collapse in navbar(THIS DID NOT COLLAPSE NAV ITEMS in center)
+
+7. npm i mdb-angular-ui-kit(was uninstalled)
+   -This is the one you should use(item 5 and 6 is the standard version
+   -This helps to create icon behaviour and carousels
+
+8. npm i angular-typewriter-effect(was uninstalled)
+   -This is for text typing animation
+
+9. npm i ng-image-slider
+   - Slider images with arrows

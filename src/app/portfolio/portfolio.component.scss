@@ -1,0 +1,281 @@
+
+  /* Navbar Styles Code Starts Here */
+  
+  mat-toolbar {
+    background-color: #7209b7;
+    height: 38px;
+    position: relative;
+    right: 0px;
+     box-shadow: 0 5px 5px 0 rgb(56, 55, 57);
+  }
+  
+  mat-sidenav{
+    background-color: #7209b7;
+    width: 230px;
+  }
+  
+  .mobile-view-nav-bar-width {
+    width: 1000px;
+    height: 68px;
+  }
+  
+  .follow-scroller-desktop {
+    position: fixed;
+    height: 60px;
+    top: 0;
+    z-index: 1030;
+    /* to prevent the navbar getting covered up by other content */
+  }
+  
+  .follow-scroller-mobile {
+    position: fixed;
+    top: 0;
+    z-index: 1030;
+  }
+  
+  .bi-linkedin {
+    color: white;
+  //  position: relative;
+  //  bottom: 0px;
+  }
+  
+  .bi-instagram {
+    color: white;
+  //  position: relative;
+  //  bottom: 0px;
+  }
+  .bi-github {
+    color: white;
+  //  position: relative;
+  //  bottom: 0px;
+  }
+
+  .active, .btn:hover {
+    background-color: #360243;
+    outline: none !important;
+    box-shadow: none;
+  }
+  
+  .btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #7209b7;
+    --bs-btn-border-color: #7209b7;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #360243;
+    --bs-btn-hover-border-color: #7209b7;
+    --bs-btn-focus-shadow-rgb: 135, 46, 194;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #7209b7;
+    --bs-btn-active-border-color: #7209b7;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #7209b7;
+    --bs-btn-disabled-border-color: #7209b7;
+  }
+  
+  
+  /* Styles For Nav Items Starts Here */
+  nav {
+    // float: right;
+    margin: -35px;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  li {
+    float: left;
+    transition: .3s;
+  }
+  /* Styles For Nav Items Ends Here */
+  
+  section {
+    min-height: 100vh; /* minus the height of the footer */
+  }
+  
+  
+  .buttons {
+    position: fixed;
+    right: 10px;
+    top: 9px;
+  }
+  
+  
+  
+  
+  
+  //styles: the colour of the menu icon displayed in mobile view
+  .mobile-menu-icon {
+    background: #7209b7;
+  }
+  
+  
+  
+  .animation-background {
+    background-color: #161a1d;
+    background-size: 800% 800%;
+    animation: Gradient 15s ease infinite;
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0px;
+  }
+  
+  
+  
+  /// ANIMATION CODE ENDS
+  /// 
+  /// 
+  /// 
+  
+  
+  //removes horizontal scroll bar below mat tab 
+  ::ng-deep .mat-tab-body-content {
+    overflow: visible !important;
+  }
+  
+  // SOCIAL MEDIA BUTTONS
+  
+  .fa {
+    padding: 12px;
+    font-size: 30px;
+    width: 62px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  /* Set a specific color for each brand */
+  
+  
+  .fa-linkedin {
+    background: darkblue;
+    color: white;
+  }
+  
+  .fa-instagram {
+    // background: white;
+    color: white;
+    background: #f09433;
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1)
+  }
+  
+  .fa-github {
+    background: white;
+    color: black;
+  }
+  
+
+  .logo-desktop {
+    border-radius: 6.25rem;
+    position: absolute;
+    height: 46px;
+    top: 6px;
+    left: 50px;
+  
+    width: 50px;
+    height: 45px;
+    filter: 
+      drop-shadow(2px 4px 4px #0006);
+    transition: 0.2s;
+    user-select: none;
+  }
+  
+  .logo-desktop:hover{
+    transform: scale(1.1, 1.1);
+  }
+  
+  .logo-mobile {
+    border-radius: 6.25rem;
+    position: fixed;
+    height: 32px;
+    top: 11px;
+  
+    width: 50px;
+    height: 45px;
+    filter: 
+      drop-shadow(2px 4px 4px #0006);
+    transition: 0.2s;
+    user-select: none;
+  }
+  
+  .logo-mobile:hover{
+    transform: scale(1.1, 1.1);
+  }
+  
+  .center {
+    text-align: center;
+  }
+
+  .digitalClock {
+    position: relative;
+    bottom: 50px;
+    left: 340px;
+    display: flex;
+    flex: 1 1 auto;
+    padding: 0 14px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+  }
+  
+  .dayTitle {
+    //font-size: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .digitalTime {
+    display: flex;
+    //  font-size: 20px;
+    //  margin-bottom:10px;
+    height: 30px;
+  }
+  
+  
+  .ampm {
+    // margin-top: 10px;
+    font-size: 16px;
+    position: relative;
+    left: 1px;
+  }
+  
+  .digitalClock-mobile {
+    // position: relative;
+    // left: 7px;
+    //width: 10px;
+    //height: 500px;
+    display: flex;
+    //flex: 1 1 auto;
+   // padding: 0 14px;
+    //flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    //background-color: #6282b3;
+    //border: 20px solid rgb(24, 24, 26);
+    //border-radius: 5px;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    //text-transform: uppercase;
+  }
+  
+  .digitalTime-mobile {
+    display: flex;
+    //  font-size: 20px;
+    //  margin-bottom:10px;
+    height: 22px;
+  }
+  
+  

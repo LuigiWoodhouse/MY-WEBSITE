@@ -1,0 +1,19 @@
+.carousel-inner {
+
+    max-height: 500px;
+    z-index: 1030;
+  
+    img {
+        z-index: 1030;
+        max-height: 560px;
+  
+    }
+  }
+
+  .carousel-control-prev {
+    z-index: 10500;
+  }
+  
+  .carousel-control-next {
+    z-index: 10500;
+  }
