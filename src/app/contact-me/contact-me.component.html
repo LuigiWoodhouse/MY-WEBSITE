@@ -168,7 +168,8 @@
 
                             <mat-form-field appearance="outline" class="full-width">
                                 <mat-label>Email</mat-label>
-                                <input matInput formControlName="email" id="email" placeholder="Email">
+                                <input matInput formControlName="email" id="email" placeholder="Email"  ngModel [email]="true">
+                                <mat-error>{{ errorMessageForEmail }}</mat-error>
                             </mat-form-field>
                             <!--         
                       <mat-form-field appearance="outline" class="full-width">

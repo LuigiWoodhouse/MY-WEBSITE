@@ -18,6 +18,14 @@ export class ContactMeComponent {
   dateVal = Date.now();
   selected!: Date | null;
 
+  get errorMessageForEmail(): string {
+    const form: UntypedFormControl = (this.contactFormControl.get('email') as UntypedFormControl);
+    return form.hasError('required') ?
+      'Email is required' :
+      form.hasError('email') ?
+        'Enter a valid email' : '';
+  }
+
 
   // CLOCK
   public hour: any;
