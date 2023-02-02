@@ -5,7 +5,7 @@
 
 <div class="follow-scroller-mobile" fxHide.gt-sm="true">
     <mat-toolbar class="mobile-view-nav-bar-width">
-        <button class="buttons" mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+        <button class="buttons" mat-icon-button aria-label="menu-icon" *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
             <mat-icon *ngIf="!sidenav.opened">
                 menu
             </mat-icon>
