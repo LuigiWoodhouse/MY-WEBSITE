@@ -1,15 +1,16 @@
 import { DatePipe } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
-  selector: 'app-portfolio',
-  templateUrl: './portfolio.component.html',
-  styleUrls: ['./portfolio.component.scss']
+  selector: 'app-contact-me',
+  templateUrl: './contact-me.component.html',
+  styleUrls: ['./contact-me.component.scss']
 })
-export class PortfolioComponent implements OnInit {
+export class ContactMeComponent {
 
-  constructor() { }
-
+  constructor(private toastr: ToastrService) { }
 
   // TODAYS DATE WILL BE GENENERED AND DISPLAYED
   private daysArray = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -42,6 +43,20 @@ export class PortfolioComponent implements OnInit {
   today: Date = new Date();
   pipe = new DatePipe('en-US');
   todayWithPipe: any;
+  contactFormControl!: UntypedFormGroup;
+
+
+
+  sendMessage() {
+    // this.contactUsService.addContact(this.contactUs).subscribe(data => {
+    this.contactFormControl.reset();
+    this.messageSentSuccessfully();
+    // })
+  }
+
+  messageSentSuccessfully() {
+    this.toastr.success('Your message has been sent successfully. I will respond within 24 hrs');
+  }
 
   ngOnInit(): void {
     this.todayWithPipe = this.pipe.transform(Date.now(), 'EEEE, MMMM d, y');
@@ -50,6 +65,14 @@ export class PortfolioComponent implements OnInit {
       this.updateDate(date);
     }, 1000);
     this.day = this.daysArray[this.date.getDay()];
+
+    this.contactFormControl = new UntypedFormGroup({
+      'name': new UntypedFormControl(null, Validators.required),
+      'email': new UntypedFormControl(null, Validators.required),
+      //'subject': new UntypedFormControl(null, Validators.required),
+      'message': new UntypedFormControl(null, Validators.required),
+      'recaptcha': new UntypedFormControl(null, Validators.required),
+    })
   }
 
 }

@@ -1,3 +1,4 @@
+import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -39,8 +40,14 @@ export class AboutComponent implements OnInit {
 
   }
 
+      
+  today: Date = new Date();
+  pipe = new DatePipe('en-US');
+  todayWithPipe:any;
+
 
   ngOnInit(): void {
+    this.todayWithPipe = this.pipe.transform(Date.now(), 'EEEE, MMMM d, y');
     setInterval(() => {
       const date = new Date();
       this.updateDate(date);

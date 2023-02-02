@@ -4,11 +4,14 @@
 
 <div class="follow-scroller-mobile" fxHide.gt-sm="true">
     <mat-toolbar class="mobile-view-nav-bar-width">
-        <div class="buttons ">
-            <button mat-icon-button (click)="sidenav.toggle()" aria-label="menu-icon">
-                <mat-icon style="color :#fff">menu</mat-icon>
-            </button>
-        </div>
+        <button class="buttons" mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+            <mat-icon *ngIf="!sidenav.opened">
+                menu
+            </mat-icon>
+            <mat-icon *ngIf="sidenav.opened">
+                close
+            </mat-icon>
+        </button>
         <a href="https://LuigiWoodhouse.com"><img src="assets/new_logo.webp" class="logo-mobile" alt="developer-logo">
         </a>
     </mat-toolbar>
@@ -25,24 +28,36 @@
 
 
     <nav>
-        <ul>
-            <li><a class="btn btn-primary active" [routerLink]="['']">Home</a></li>
-            <li><a class="btn btn-primary" [routerLink]="['/about']">About</a></li>
-            <li><a class="btn btn-primary" [routerLink]="['/portfolio']">Portfolio</a></li>
+        <ul class="to-the-left">
+            <a class="btn btn-primary active" [routerLink]="['']">Home</a>
+            <a class="btn btn-primary" [routerLink]="['/about']">About</a>
+            <a class="btn btn-primary" [routerLink]="['/portfolio']">Portfolio</a>
+            <a class="btn btn-primary" [routerLink]="['/contact-me']">Contact Me</a>
         </ul>
     </nav>
 
     <!--DIGITAL CLOCK SHOWING REAL TIME AND TODAY'S DATE-->
     <div class="digitalClock">
-        {{day}}&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-        <div class="digitalTime">
-            <div>{{hour}}: &nbsp;</div>
-            <div>{{minute}}: &nbsp;</div>
-            <div>{{second}} &nbsp;</div>
-            <div class="ampm">{{ampm}}</div>
-        </div>&nbsp;&nbsp;&nbsp;<div style=" height: 30px;">Jamaica</div>
+        <div>Today's Date is : {{ todayWithPipe }}</div>
+
+
     </div>
+
+    <div class="digitalTime">
+        <div>{{hour}}: &nbsp;</div>
+        <div>{{minute}}: &nbsp;</div>
+        <div>{{second}} &nbsp;</div>
+        <div class="ampm">{{ampm}}</div>
+    </div>
+
+
+    <div class="country-name"><img src="assets/jamaica-flag-icon.WEBP" alt="jamaica-flag-picture" height=20px
+            width=40px></div>
 
 </mat-toolbar>
 
@@ -93,28 +108,35 @@
             <br><br>
         </div>
         <hr>
-        <br> &nbsp;&nbsp;&nbsp;
-        <a style=" color: white ; text-decoration: none;" [routerLink]="['']">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a style=" color: white ; text-decoration: none;" [routerLink]="['/about']">About</a>&nbsp;&nbsp;&nbsp;&nbsp;
-        <a style=" color: white ; text-decoration: none;" [routerLink]="['/portfolio']">Portfolio</a>
+        <br>
+        <ul >
+            <li><a style=" color: white ; text-decoration: none;" [routerLink]="['']">Home</a></li><br>
+
+            <li><a style=" color: white ; text-decoration: none;" [routerLink]="['/about']">About</a></li><br>
+
+            <li><a style=" color: white ; text-decoration: none;" [routerLink]="['/portfolio']">Portfolio</a></li><br>
+
+            <li><a style=" color: white ; text-decoration: none;" [routerLink]="['/contact-me']">Contact Me</a></li>
+        </ul>
+
         <br><br>
         <hr>
         <br>
         <div class="digitalClock-mobile">
-            &nbsp;&nbsp;&nbsp; {{day}}&nbsp;&nbsp;
+            <div>Today's Date is : {{ todayWithPipe }}</div>
 
-            <div class="digitalTime-mobile">
-                <div>{{hour}}&nbsp;: &nbsp;</div>
-                <div>{{minute}}&nbsp;: &nbsp;</div>
-                <div>{{second}} &nbsp;</div>&nbsp;&nbsp;
-                <div class="ampm">{{ampm}}</div>
-            </div>
+
+        </div>
+
+        <div class="digitalTime-mobile">
+            <div>{{hour}}&nbsp;: &nbsp;</div>
+            <div>{{minute}}&nbsp;: &nbsp;</div>
+            <div>{{second}} &nbsp;</div>&nbsp;&nbsp;
+            <div class="ampm">{{ampm}}</div>
         </div>
 
         <br>
-        <div class="center" style=" color: white">
-            Jamaica
-        </div>
+
 
     </mat-sidenav>
 
@@ -127,7 +149,7 @@
 
             <br>
             <h6 class="last-update">
-                Last Updated : January 1, 2023
+                Last Updated : February 1, 2023
             </h6>
 
 
@@ -180,12 +202,12 @@
                             with</span>
 
 
-                        <ul><br>
-                            <li>✔️ Developing your online presence</li><br>
-                            <br>
-                            <li>✔️ Create an attractive website</li><br>
-                            <br>
-                            <li>✔️ With Great SEO & Optimization</li>
+                        <ul>
+                            <li><mat-icon class="mat-check-icon">check</mat-icon> Developing your online presence</li>
+
+                            <li><mat-icon class="mat-check-icon">check</mat-icon> Create an attractive website</li>
+
+                            <li><mat-icon class="mat-check-icon">check</mat-icon> With Great SEO & Optimization</li>
                         </ul>
 
                     </div>
@@ -223,14 +245,18 @@
                             <br>
                             <span style="font-size:26px; color:rgb(164, 14, 205) ; font-weight: 550;">You may need
                                 a</span>
-                            <ul><br>
-                                <li>✔️ Online E-commerce Store customized to your liking</li><br>
-                                <br>
-                                <li>✔️ User accounts so that you can serve your customers better</li><br>
-                                <br>
-                                <li>✔️ Employee Management System to store information of your employees</li><br>
-                                <br>
-                                <li>✔️ Real Time Inventory Management System to keep track of inventory</li>
+                            <ul>
+                                <li><mat-icon class="mat-check-icon">check</mat-icon> Online E-commerce Store customized
+                                    to your liking</li>
+
+                                <li><mat-icon class="mat-check-icon">check</mat-icon> User accounts so that you can
+                                    serve your customers better</li>
+
+                                <li><mat-icon class="mat-check-icon">check</mat-icon> Employee Management System to
+                                    store information of your employees</li>
+
+                                <li><mat-icon class="mat-check-icon">check</mat-icon> Real Time Inventory Management
+                                    System to keep track of inventory</li>
                             </ul>
                         </div>
 
@@ -261,14 +287,14 @@
                         <span style="font-size:26px; color:rgb(164, 14, 205) ; font-weight: 550;">I can teach you in way
                             that you will
                             surely understand</span>
-                        <ul><br>
-                            <li>✔️ Binary Coded Decimal & Arithmetic</li><br>
-                            <br>
-                            <li>✔️ Truth Tables</li><br>
-                            <br>
-                            <li>✔️ Matrices</li><br>
-                            <br>
-                            <li>✔️ Microsoft Excel</li>
+                        <ul>
+                            <li><mat-icon class="mat-check-icon">check</mat-icon> Binary Coded Decimal & Arithmetic</li>
+
+                            <li><mat-icon class="mat-check-icon">check</mat-icon> Truth Tables</li>
+
+                            <li><mat-icon class="mat-check-icon">check</mat-icon>Matrices</li>
+
+                            <li><mat-icon class="mat-check-icon">check</mat-icon> Microsoft Excel</li>
                         </ul>
 
                     </div>
@@ -301,12 +327,12 @@
                             <span style="font-size:26px; color:rgb(164, 14, 205) ; font-weight: 550;">You are in the
                                 right place, I can
                                 help with</span>
-                            <ul><br>
-                                <li>✔️ Analytic Writing</li><br>
-                                <br>
-                                <li>✔️ Proofreading</li><br>
-                                <br>
-                                <li>✔️ Resume Building </li><br>
+                            <ul>
+                                <li><mat-icon class="mat-check-icon">check</mat-icon> Analytic Writing</li>
+
+                                <li><mat-icon class="mat-check-icon">check</mat-icon> Proofreading</li>
+
+                                <li><mat-icon class="mat-check-icon">check</mat-icon> Resume Building </li>
                             </ul>
                         </div>
 
