@@ -23,7 +23,19 @@ export class ContactMeComponent {
     return form.hasError('required') ?
       'Email is required' :
       form.hasError('email') ?
-        'Enter a valid email' : '';
+        'Enter a valid email' : ''
+  }
+
+  get errorMessageForName(): string {
+    const form: UntypedFormControl = (this.contactFormControl.get('email') as UntypedFormControl);
+    return form.hasError('required') ?
+      'Name is required' : ''
+  }
+
+  get errorMessageForMessage(): string {
+    const form: UntypedFormControl = (this.contactFormControl.get('email') as UntypedFormControl);
+    return form.hasError('required') ?
+      'Messsage is required' : ''
   }
 
 

@@ -164,6 +164,7 @@
                             <mat-form-field appearance="outline" class="full-width">
                                 <mat-label>Your Name</mat-label>
                                 <input matInput formControlName="name" id="name" placeholder="Your Name">
+                                <mat-error>{{ errorMessageForName }}</mat-error>
                             </mat-form-field>
 
                             <mat-form-field appearance="outline" class="full-width">
@@ -171,16 +172,13 @@
                                 <input matInput formControlName="email" id="email" placeholder="Email"  ngModel [email]="true">
                                 <mat-error>{{ errorMessageForEmail }}</mat-error>
                             </mat-form-field>
-                            <!--         
-                      <mat-form-field appearance="outline" class="full-width">
-                        <mat-label>Subject</mat-label>
-                        <input matInput formControlName="subject" placeholder="Subject" >
-                      </mat-form-field> -->
+        
 
                             <mat-form-field appearance="outline" class="full-width">
                                 <mat-label>Message</mat-label>
                                 <textarea matInput formControlName="message" id="message" placeholder="Message"
                                     matInput></textarea>
+                                    <mat-error>{{ errorMessageForMessage }}</mat-error>
                             </mat-form-field>
 
                             <ngx-recaptcha2 #captchaElem siteKey="6Le4QMgiAAAAAAOTyKVIOn5UDfM7LTsx4ckWTaiq"
