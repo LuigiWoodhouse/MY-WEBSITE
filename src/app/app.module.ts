@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ReactiveFormsModule } from '@angular/forms';
-import { NgxCaptchaModule } from 'ngx-captcha';
+
 
 
 //<<<<<< COMPONENTS>>>>>>//
@@ -17,6 +17,7 @@ import { VideoComponent } from './video/video.component';
 import { ImageComponent } from './image/image.component';
 import { FooterComponent } from './layouts/footer/footer.component';
 import { CarouselComponent } from './layouts/carousel/carousel.component';
+import { ContactMeComponent } from './contact-me/contact-me.component';
 
 
 //<<<<<< MATERIAL>>>>>>//
@@ -34,8 +35,9 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 
 // External libraries
 import { NgParticlesModule } from "ng-particles";
+import { NgxCaptchaModule } from 'ngx-captcha';
+import { ToastrModule } from 'ngx-toastr';
 
-//<<<<<<SPECIAL UI KITS>>>>>>//
 
 
 
@@ -49,7 +51,8 @@ import { NgParticlesModule } from "ng-particles";
     AboutComponent,
     PortfolioComponent,
     VideoComponent,
-    ImageComponent
+    ImageComponent,
+    ContactMeComponent
   ],
   imports: [
     BrowserModule,
@@ -67,7 +70,14 @@ import { NgParticlesModule } from "ng-particles";
     MatFormFieldModule,
     MatInputModule,
     MatTooltipModule,
-    NgParticlesModule
+    NgParticlesModule,
+    ToastrModule.forRoot({
+      timeOut: 3000,
+      preventDuplicates: true,
+      progressAnimation: 'increasing',
+      progressBar: true,
+      positionClass: 'toast-top-right',
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

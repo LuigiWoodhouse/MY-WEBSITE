@@ -40,4 +40,5 @@ $my-website-theme: mat.define-light-theme((
 
 @import 'bootstrap/scss/bootstrap';
 
-
+// regular style toast
+@import 'ngx-toastr/toastr';

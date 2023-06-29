@@ -3,6 +3,7 @@ import { Validators, FormGroup, FormControl } from '@angular/forms';
 import { ReCaptcha2Component } from 'ngx-captcha';
 import { MoveDirection, ClickMode, HoverMode, OutMode, Container, Engine } from "tsparticles-engine";
 import { loadFull } from "tsparticles";
+import { DatePipe } from '@angular/common';
 
 
 
@@ -31,6 +32,10 @@ export class HomepageComponent implements OnInit {
     showText() {
         this.isReadMore = !this.isReadMore
     }
+    
+    today: Date = new Date();
+    pipe = new DatePipe('en-US');
+    todayWithPipe:any;
 
 
     // CLOCK
@@ -55,7 +60,19 @@ export class HomepageComponent implements OnInit {
 
     }
 
-    id = "tsparticles";
+ 
+
+
+    ngOnInit(): void {
+        this.todayWithPipe = this.pipe.transform(Date.now(), 'EEEE, MMMM d, y');
+        setInterval(() => {
+            const date = new Date();
+            this.updateDate(date);
+        }, 1000);
+        this.day = this.daysArray[this.date.getDay()];
+    }
+
+       id = "tsparticles";
 
     /* Starting from 1.19.0 you can use a remote url (AJAX request) to a JSON with the configuration */
     particlesUrl = "http://foo.bar/particles.json";
@@ -145,22 +162,5 @@ export class HomepageComponent implements OnInit {
         // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
         // starting from v2 you can add only the features you need reducing the bundle size
         await loadFull(engine);
-    }
-
-
-    ngOnInit(): void {
-        setInterval(() => {
-            const date = new Date();
-            this.updateDate(date);
-        }, 1000);
-        this.day = this.daysArray[this.date.getDay()];
-
-        this.contactFormControl = new FormGroup({
-            'name': new FormControl(null, Validators.required),
-            'email': new FormControl(null, Validators.required),
-            'subject': new FormControl(null, Validators.required),
-            'message': new FormControl(null, Validators.required),
-            'recaptcha': new FormControl(null, Validators.required),
-        })
     }
 }

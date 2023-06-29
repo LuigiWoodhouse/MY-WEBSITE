@@ -1,6 +1,6 @@
-// * {
-//   margin: 0;
-// }
+* {
+  margin: 0;
+}
 
 .center {
   text-align: center;
@@ -92,7 +92,7 @@ ul {
 }
 
 li {
-  float: left;
+  //float: left;
   transition: .3s;
 }
 
@@ -102,10 +102,13 @@ li {
   position: fixed;
   right: 10px;
   top: 9px;
+  color:white;
 }
 
 
-
+.to-the-left {
+  display: flex;
+}
 
 
 .animation-background {
@@ -217,62 +220,60 @@ li {
 
 .digitalClock {
   position: relative;
-  bottom: 50px;
-  left: 340px;
+  bottom: 70px;
+  left: 295px;
   display: flex;
   flex: 1 1 auto;
   padding: 0 14px;
   justify-content: center;
   align-items: center;
   border-radius: 5px;
-  font-size: 16px;
-  color: rgb(255, 255, 255);
+  font-size: 13px;
+  color: #e3c454;
 }
 
 .dayTitle {
-  //font-size: 10px;
   margin-bottom: 10px;
 }
 
 .digitalTime {
+  color: #e3c454;
+  font-size: 13px;
   display: flex;
-  //  font-size: 20px;
-  //  margin-bottom:10px;
-  height: 30px;
+  position: relative;
+  bottom: 90px;
+  left: 431px;
+}
+
+.country-name{
+  height: 32px;
+  position: absolute;
+  bottom: 20px;
+  left: 210px;
+  color: rgb(206, 212, 213);
 }
 
 
 .ampm {
-  // margin-top: 10px;
-  font-size: 16px;
+  font-size: 13px;
   position: relative;
   left: 1px;
 }
 
 .digitalClock-mobile {
-  // position: relative;
-  // left: 7px;
-  //width: 10px;
-  //height: 500px;
   display: flex;
-  //flex: 1 1 auto;
-  // padding: 0 14px;
-  //flex-direction: column;
-  // justify-content: center;
   align-items: center;
-  //background-color: #6282b3;
-  //border: 20px solid rgb(24, 24, 26);
-  //border-radius: 5px;
   font-size: 16px;
-  color: rgb(255, 255, 255);
-  //text-transform: uppercase;
+  color: #e3c454;
 }
 
 .digitalTime-mobile {
   display: flex;
-  //  font-size: 20px;
-  //  margin-bottom:10px;
-  height: 22px;
+ // height: 22px;
+  position: relative;
+  top: 15px;
+  color: #e3c454;
+  left: 1px;
 }
 
 

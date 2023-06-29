@@ -1,10 +1,15 @@
 <div class="follow-scroller-mobile" fxHide.gt-sm="true">
   <mat-toolbar class="mobile-view-nav-bar-width">
-    <div class="buttons ">
-      <button mat-icon-button (click)="sidenav.toggle()" aria-label="menu-icon">
-        <mat-icon style="color :#fff">menu</mat-icon>
-      </button>
-    </div>
+    <button class="buttons" mat-icon-button aria-label="menu-icon" *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+      <mat-icon *ngIf="!sidenav.opened">
+        menu
+      </mat-icon>
+      <mat-icon *ngIf="sidenav.opened">
+        close
+      </mat-icon>
+    </button>
+    <a href="https://LuigiWoodhouse.com"><img src="assets/new_logo.webp" class="logo-mobile" alt="developer-logo">
+    </a>
     <a href="https://LuigiWoodhouse.com"><img src="assets/new_logo.webp" class="logo-mobile" alt="developer-logo">
     </a>
   </mat-toolbar>
@@ -21,23 +26,35 @@
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
   <nav>
-    <ul>
-      <li><a class="btn btn-primary " [routerLink]="['']">Home</a></li>
-      <li><a class="btn btn-primary active " [routerLink]="['/about']">About</a></li>
-      <li><a class="btn btn-primary" [routerLink]="['/portfolio']">Portfolio</a></li>
+    <ul class="to-the-left">
+      <a class="btn btn-primary" [routerLink]="['']">Home</a>
+      <a class="btn btn-primary active" [routerLink]="['/about']">About</a>
+      <a class="btn btn-primary" [routerLink]="['/portfolio']">Portfolio</a>
+      <a class="btn btn-primary" [routerLink]="['/contact-me']">Contact Me</a>
     </ul>
   </nav>
 
   <!--DIGITAL CLOCK SHOWING REAL TIME AND TODAY'S DATE-->
   <div class="digitalClock">
-    {{day}}&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-    <div class="digitalTime">
-      <div>{{hour}}: &nbsp;</div>
-      <div>{{minute}}: &nbsp;</div>
-      <div>{{second}} &nbsp;</div>
-      <div class="ampm">{{ampm}}</div>
-    </div>&nbsp;&nbsp;&nbsp;<div style=" height: 30px;">Jamaica</div>
+    <div>Date in JM  : {{ todayWithPipe }}</div>
+
+
+  </div>
+
+  <div class="digitalTime">
+    <div>{{hour}}: &nbsp;</div>
+    <div>{{minute}}: &nbsp;</div>
+    <div>{{second}} &nbsp;</div>
+    <div class="ampm">{{ampm}}</div>
+  </div>
+
+
+  <div class="country-name"><img src="assets/jamaica-flag-icon.WEBP" alt="jamaica-flag-picture" height=20px width=40px>
   </div>
 
 
@@ -91,28 +108,34 @@
 
 
     <hr>
-    <br> &nbsp;&nbsp;&nbsp;
-    <a style=" color: white ; text-decoration: none;" [routerLink]="['']">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a style=" color: white ; text-decoration: none;" [routerLink]="['/about']">About</a>&nbsp;&nbsp;&nbsp;&nbsp;
-    <a style=" color: white ; text-decoration: none; " [routerLink]="['/portfolio']">Portfolio</a>
+    <br>
+    <ul>
+      <li><a style=" color: white ; text-decoration: none;" [routerLink]="['']">Home</a></li><br>
+
+      <li><a style=" color: white ; text-decoration: none;" [routerLink]="['/about']">About</a></li><br>
+
+      <li><a style=" color: white ; text-decoration: none;" [routerLink]="['/portfolio']">Portfolio</a></li><br>
+
+      <li><a style=" color: white ; text-decoration: none;" [routerLink]="['/contact-me']">Contact Me</a></li>
+    </ul>
+
     <br><br>
     <hr>
     <br>
     <div class="digitalClock-mobile">
-      &nbsp;&nbsp;&nbsp; {{day}}&nbsp;&nbsp;
+      <div>Date in JM  : {{ todayWithPipe }}</div>
 
-      <div class="digitalTime-mobile">
-        <div>{{hour}}&nbsp;: &nbsp;</div>
-        <div>{{minute}}&nbsp;: &nbsp;</div>
-        <div>{{second}} &nbsp;</div>&nbsp;&nbsp;
-        <div class="ampm">{{ampm}}</div>
-      </div>
+
+    </div>
+
+    <div class="digitalTime-mobile">
+      <div>{{hour}}&nbsp;: &nbsp;</div>
+      <div>{{minute}}&nbsp;: &nbsp;</div>
+      <div>{{second}} &nbsp;</div>&nbsp;&nbsp;
+      <div class="ampm">{{ampm}}</div>
     </div>
 
     <br>
-    <div class="center" style=" color: white">
-      Jamaica
-    </div>
 
   </mat-sidenav>
 

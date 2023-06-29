@@ -69,6 +69,7 @@ mat-sidenav {
 
 nav {
   margin: -35px;
+
 }
 
 ul {
@@ -76,14 +77,19 @@ ul {
 }
 
 li {
-  float: left;
+  //float: left;
   transition: .3s;
+}
+
+.to-the-left {
+  display: flex;
 }
 
 .buttons {
   position: fixed;
   right: 10px;
   top: 9px;
+  color:white;
 }
 
 
@@ -126,16 +132,16 @@ li {
 
 .digitalClock {
   position: relative;
-  bottom: 50px;
-  left: 340px;
+  bottom: 70px;
+  left: 295px;
   display: flex;
   flex: 1 1 auto;
   padding: 0 14px;
   justify-content: center;
   align-items: center;
   border-radius: 5px;
-  font-size: 16px;
-  color: rgb(255, 255, 255);
+  font-size: 13px;
+  color: #e3c454;
 }
 
 .dayTitle {
@@ -143,13 +149,25 @@ li {
 }
 
 .digitalTime {
+  color: #e3c454;
+  font-size: 13px;
   display: flex;
-  height: 30px;
+  position: relative;
+  bottom: 90px;
+  left: 431px;
+}
+
+.country-name{
+  height: 32px;
+  position: absolute;
+  bottom: 20px;
+  left: 210px;
+  color: rgb(206, 212, 213);
 }
 
 
 .ampm {
-  font-size: 16px;
+  font-size: 13px;
   position: relative;
   left: 1px;
 }
@@ -158,12 +176,16 @@ li {
   display: flex;
   align-items: center;
   font-size: 16px;
-  color: rgb(255, 255, 255);
+  color: #e3c454;
 }
 
 .digitalTime-mobile {
   display: flex;
-  height: 22px;
+ // height: 22px;
+  position: relative;
+  top: 15px;
+  color: #e3c454;
+  left: 1px;
 }
 
 /* Styles For Nav Items Ends Here */
@@ -405,6 +427,10 @@ mat-progress-bar {
   color: white;
 }
 
+.bi-stackoverflow {
+  color: white;
+}
+
 .social-text {
   color: white;
 }
@@ -415,3 +441,7 @@ mat-progress-bar {
 }
 
 // SOCIAL MEDIA BUTTONS code ends here =========================================================================================
+
+.mat-check-icon {
+  color: green;
+}

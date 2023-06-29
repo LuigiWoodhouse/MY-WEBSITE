@@ -1,4 +1,8 @@
+<p>contact-me works!</p>
+<!-- this div will show when it is in mobile view-->
+
 <!--NAVIGATION TOOLBAR-->
+
 <div class="follow-scroller-mobile" fxHide.gt-sm="true">
     <mat-toolbar class="mobile-view-nav-bar-width">
         <button class="buttons" mat-icon-button aria-label="menu-icon" *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
@@ -9,7 +13,7 @@
                 close
             </mat-icon>
         </button>
-        <a href="https://LuigiWoodhouse.com"><img src="assets/new_logo.webp" class="logo-mobile" alt="Avatar">
+        <a href="https://LuigiWoodhouse.com"><img src="assets/new_logo.webp" class="logo-mobile" alt="developer-logo">
         </a>
     </mat-toolbar>
 </div>
@@ -18,17 +22,16 @@
 
 <mat-toolbar class="follow-scroller-desktop" fxLayout="column" fxLayoutGap="15px" fxHide.lt-md="true">
     <!-- DESKTOP VIEW-->
-    <a href="https://LuigiWoodhouse.com"><img src="assets/new_logo.webp" class="logo-desktop" alt="Avatar">
-    </a>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="https://LuigiWoodhouse.com"><img src="assets/new_logo.webp" class="logo-desktop" alt="developer-logo">
+    </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
     <nav>
         <ul class="to-the-left">
             <a class="btn btn-primary" [routerLink]="['']">Home</a>
             <a class="btn btn-primary" [routerLink]="['/about']">About</a>
-            <a class="btn btn-primary active" [routerLink]="['/portfolio']">Portfolio</a>
-            <a class="btn btn-primary" [routerLink]="['/contact-me']">Contact Me</a>
+            <a class="btn btn-primary" [routerLink]="['/portfolio']">Portfolio</a>
+            <a class="btn btn-primary active" [routerLink]="['/contact-me']">Contact Me</a>
         </ul>
     </nav>
 
@@ -59,18 +62,18 @@
 </mat-toolbar>
 
 
-<mat-sidenav-container fxFlexFill>
+<mat-sidenav-container>
 
     <!-- MOBILE VIEW -->
 
     <mat-sidenav class="follow-scroller-mobile" #sidenav fxLayoutAlign="end">
-        <img class="avatar mat-elevation-z8" src="assets/Improved_Me.webp" height=290px width=230px><br><br>
+        <img class="avatar mat-elevation-z8" src="assets/Improved_Me.webp" alt="developer-picture" height=290px
+            width=230px><br><br>
 
 
 
         <h4 class="center" style="color:white">Luigi Woodhouse</h4><br>
         &nbsp;
-
         <div align="center">
             <a matTooltip="Linkedin" href="https://www.linkedin.com/in/luigi-woodhouse-0012bb152/" target="_blank"
                 aria-label="linkedin">
@@ -104,7 +107,6 @@
             </a>
             <br><br>
         </div>
-
         <hr>
         <br>
         <ul>
@@ -136,35 +138,66 @@
     </mat-sidenav>
 
 
-
-
-    <mat-sidenav-content fxFlexFill>
+    <mat-sidenav-content>
         <!-- Background animation-->
-        <div class="animation-background">
 
+        <div class="background">
 
+            <section id="contact">
+                <div class="contact-box">
+                    <div class="contact-links">
+                        <h2>CONTACT</h2>
+                        <br>
+                        <h2>ME</h2>
 
-            <br> <br> <br>
+                        <br><br>
+                        <div style="color: rgb(247, 245, 245);">
+                            I will respond to you via following email address :
+                            codeitfrun@gmail.com
+                            🙂
+                        </div>
 
+                    </div>
+                    <div class="contact-form-wrapper">
+                        <form [formGroup]="contactFormControl">
 
-            <mat-tab-group mat-align-tabs="center" color="primary">
-                <mat-tab>
-                    <ng-template mat-tab-label>
-                        <mat-icon style="color: white">video_library</mat-icon>
-                    </ng-template>
+                            <mat-form-field appearance="outline" class="full-width">
+                                <mat-label>Your Name</mat-label>
+                                <input matInput formControlName="name" id="name" placeholder="Your Name">
+                                <mat-error>{{ errorMessageForName }}</mat-error>
+                            </mat-form-field>
 
-                    <app-video></app-video>
-                </mat-tab>
+                            <mat-form-field appearance="outline" class="full-width">
+                                <mat-label>Email</mat-label>
+                                <input matInput formControlName="email" id="email" placeholder="Email"  ngModel [email]="true">
+                                <mat-error>{{ errorMessageForEmail }}</mat-error>
+                            </mat-form-field>
+        
 
-                <mat-tab>
-                    <ng-template mat-tab-label>
-                        <mat-icon style="color: white">image</mat-icon>
-                    </ng-template>
-                    <app-image></app-image>
-                </mat-tab>
-            </mat-tab-group>
-            <br><br><br><br><br>
+                            <mat-form-field appearance="outline" class="full-width">
+                                <mat-label>Message</mat-label>
+                                <textarea matInput formControlName="message" id="message" placeholder="Message"
+                                    matInput></textarea>
+                                    <mat-error>{{ errorMessageForMessage }}</mat-error>
+                            </mat-form-field>
 
+                            <ngx-recaptcha2 #captchaElem siteKey="6Le4QMgiAAAAAAOTyKVIOn5UDfM7LTsx4ckWTaiq"
+                                formControlName="recaptcha">
+                            </ngx-recaptcha2>
+
+                            <br>
+
+                            <button [disabled]="!contactFormControl.valid" mat-raised-button color="primary"
+                                class="full-width" (click)="sendMessage()" onclick="sendMail()">
+                                <p>Send Message</p>
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+            </section>
         </div>
         <app-footer></app-footer>
     </mat-sidenav-content>
