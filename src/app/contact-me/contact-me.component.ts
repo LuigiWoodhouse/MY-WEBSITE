@@ -91,7 +91,7 @@ export class ContactMeComponent {
       'email': new UntypedFormControl(null, Validators.required),
       //'subject': new UntypedFormControl(null, Validators.required),
       'message': new UntypedFormControl(null, Validators.required),
-      'recaptcha': new UntypedFormControl(null, Validators.required),
+      //'recaptcha': new UntypedFormControl(null, Validators.required),
     })
   }
 
