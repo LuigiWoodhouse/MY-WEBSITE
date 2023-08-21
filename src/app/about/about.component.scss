@@ -83,8 +83,7 @@ mat-sidenav {
 
 /* Styles For Nav Items Starts Here */
 nav {
-  // float: right;
-  margin: -35px;
+  margin: 10px;
 }
 
 ul {
@@ -92,8 +91,7 @@ ul {
 }
 
 li {
-  //float: left;
-  transition: .3s;
+  float: left;
 }
 
 /* Styles For Nav Items Ends Here */
@@ -259,7 +257,6 @@ li {
   position: relative;
   left: 1px;
 }
-
 .digitalClock-mobile {
   display: flex;
   align-items: center;

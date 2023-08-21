@@ -1,0 +1,232 @@
+// * {
+//   margin: 0;
+// }
+
+
+
+.rounded-circle {
+    position: absolute;
+    bottom: 16.5px;
+    left: 50px;
+    height: 50px;
+    width: 60px;
+    filter:
+      drop-shadow(2px 4px 4px #0006);
+    transition: 0.2s;
+  }
+  
+  .rounded-circle:hover {
+    transform: scale(1.1, 1.1);
+  }
+  
+  
+  //===========================================================================================================================
+  /* Navbar Styles Code Starts Here */
+  
+  .follow-scroller {
+    //width: 1000px //NB. a little space appears on screen at widths 226px and over 800px;
+    position: fixed;
+    top: 0;
+  }
+  
+  .align-menu-icon-right {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    color: white;
+  }
+  
+  .hamburger-icon-size {
+    font-size: 30px;
+    position: fixed;
+    top: 19px;
+    right: 23px;
+    color: white;
+  }
+
+  .country-name{
+    height: 32px;
+    position: absolute;
+    bottom: 20px;
+    left: 210px;
+    color: rgb(206, 212, 213);
+  }
+  
+  //Background color of page
+  .background {
+    background-color: #180108;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    // margin-top: 44px;
+    // margin-bottom: 44%;
+    //padding-top: 333px;
+  }
+  
+  mat-toolbar {
+    background-color: #7209b7;
+    height: 70px;
+    position: relative;
+    right: 0px;
+    z-index: 323;
+    box-shadow: 0 5px 5px 0 rgb(56, 55, 57);
+  }
+  
+  mat-sidenav {
+    width: 250px;
+    //border-right: none;
+    background-color: #7209b7;
+    color: white;
+    border-radius: 10px;
+    padding: 16px;
+    height: 100%;
+  }
+  
+  // mat-sidenav-container {
+  //   height: calc(100vh - 65px);
+  // }
+  
+  .active,
+  .btn:hover {
+    outline: none !important;
+    box-shadow: none;
+    background-color: #360243;
+  }
+  
+  .btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #7209b7;
+    --bs-btn-border-color: #7209b7;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #360243;
+    --bs-btn-hover-border-color: #7209b7;
+    --bs-btn-focus-shadow-rgb: 135, 46, 194;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #7209b7;
+    --bs-btn-active-border-color: #7209b7;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #7209b7;
+    --bs-btn-disabled-border-color: #7209b7;
+  }
+  
+  /* Navbar Styles Code Ends Here */
+  //===========================================================================================================================
+  
+  
+  //===========================================================================================================================
+  /* Styles For Nav Items Starts Here */
+  nav {
+    margin: 10px;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  //This aligns hamburger button to the right
+  .align-menu-icon-right {
+    position: fixed;
+    right: 10px;
+    color: white;
+  }
+  
+  /* Styles For Nav Items Ends Here */
+  //===========================================================================================================================
+  
+  
+  
+  //==============================================================================================================
+  /* Digitcal Clock code starts here */
+  
+  .date {
+    position: relative;
+    bottom: 15px;
+    right: 100px;
+    font-size: 13px;
+    color: orange;
+  }
+  
+  .dayTitle {
+    margin-bottom: 10px;
+  }
+  
+  .digitalTime {
+    color: orange;
+    font-size: 13px;
+    display: flex;
+    position: relative;
+    bottom: 47px;
+    left: 200px;
+  }
+  
+  
+  .ampm {
+    font-size: 14px;
+    position: relative;
+    left: 1px;
+    z-index: 1030;
+  }
+  
+  .date-mobile {
+    position: relative;
+    top: 160px;
+    right: 70px;
+    font-size: 12px;
+    color: orange;
+  }
+  
+  .date-mobile-2 {
+    position: relative;
+    top: 40px;
+    left: 45px;
+    font-size: 12px;
+    color: orange;
+    display: inline-block;
+  }
+  
+  
+  
+  .digitalTime-mobile {
+    color: orange;
+    font-size: 13px;
+    display: flex;
+    position: absolute;
+    top: 340px;
+    left: 70px;
+    font-weight: bold;
+  }
+
+  .logo-desktop {
+    border-radius: 6.25rem;
+    position: absolute;
+    height: 46px;
+    top: 6px;
+    left: 50px;
+  
+    width: 50px;
+    height: 45px;
+    filter: 
+      drop-shadow(2px 4px 4px #0006);
+    transition: 0.2s;
+    user-select: none;
+  }
+
+  .logo-desktop:hover {
+    transform: scale(1.1, 1.1);
+  }
+  
+  
+  .ampm-mobile {
+    font-size: 14px;
+    position: relative;
+    left: 1px;
+    z-index: 1030;
+  }
+  
+  
+  //==============================================================================================================
+  /* Digitcal Clock code ends here */

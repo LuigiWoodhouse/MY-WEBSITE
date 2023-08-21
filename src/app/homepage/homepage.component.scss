@@ -4,165 +4,23 @@
 
 /* Navbar Styles Code Starts Here */
 
-mat-toolbar {
-  background-color: #7209b7;
-  height: 38px;
-  position: relative;
-  right: 0px;
-  box-shadow: 0 5px 5px 0 rgb(56, 55, 57);
+
+
+
+ul{
+  list-style: none;
 }
 
-mat-sidenav {
-  background-color: #7209b7;
-  width: 230px;
-}
-
-.mobile-view-nav-bar-width {
-  width: 1000px;
-  height: 68px;
-}
-
-.follow-scroller-desktop {
-  position: fixed;
-  height: 60px;
-  top: 0;
-  z-index: 1030;
-  /* to prevent the navbar getting covered up by other content */
-}
-
-.follow-scroller-mobile {
-  position: fixed;
-  top: 0;
-  z-index: 1030;
-}
-
-.active,
-.btn:hover {
-  background-color: #360243;
-  outline: none !important;
-  box-shadow: none;
-}
-
-.btn-primary {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: #7209b7;
-  --bs-btn-border-color: #7209b7;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #360243;
-  --bs-btn-hover-border-color: #7209b7;
-  --bs-btn-focus-shadow-rgb: 135, 46, 194;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #7209b7;
-  --bs-btn-active-border-color: #7209b7;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #7209b7;
-  --bs-btn-disabled-border-color: #7209b7;
-  z-index: 1030;
-  position: relative;
-}
 
 /* Navbar Styles Code Ends Here */
 
 
 /*Styles For Nav Items Starts Here */
 
-nav {
-  margin: -35px;
 
-}
-
-ul {
-  list-style: none;
-}
-
-li {
-  //float: left;
-  transition: .3s;
-}
 
 .to-the-left {
   display: flex;
-}
-
-.buttons {
-  position: fixed;
-  right: 10px;
-  top: 9px;
-  color:white;
-}
-
-
-.logo-desktop {
-  border-radius: 6.25rem;
-  position: absolute;
-  height: 46px;
-  top: 6px;
-  left: 50px;
-
-  width: 50px;
-  height: 45px;
-  filter:
-    drop-shadow(2px 4px 4px #0006);
-  transition: 0.2s;
-  user-select: none;
-}
-
-.logo-desktop:hover {
-  transform: scale(1.1, 1.1);
-}
-
-.logo-mobile {
-  border-radius: 6.25rem;
-  position: fixed;
-  height: 32px;
-  top: 11px;
-
-  width: 50px;
-  height: 45px;
-  filter:
-    drop-shadow(2px 4px 4px #0006);
-  transition: 0.2s;
-  user-select: none;
-}
-
-.logo-mobile:hover {
-  transform: scale(1.1, 1.1);
-}
-
-.digitalClock {
-  position: relative;
-  bottom: 70px;
-  left: 295px;
-  display: flex;
-  flex: 1 1 auto;
-  padding: 0 14px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-  font-size: 13px;
-  color: #e3c454;
-}
-
-.dayTitle {
-  margin-bottom: 10px;
-}
-
-.digitalTime {
-  color: #e3c454;
-  font-size: 13px;
-  display: flex;
-  position: relative;
-  bottom: 90px;
-  left: 431px;
-}
-
-.country-name{
-  height: 32px;
-  position: absolute;
-  bottom: 20px;
-  left: 210px;
-  color: rgb(206, 212, 213);
 }
 
 
@@ -172,21 +30,6 @@ li {
   left: 1px;
 }
 
-.digitalClock-mobile {
-  display: flex;
-  align-items: center;
-  font-size: 16px;
-  color: #e3c454;
-}
-
-.digitalTime-mobile {
-  display: flex;
- // height: 22px;
-  position: relative;
-  top: 15px;
-  color: #e3c454;
-  left: 1px;
-}
 
 /* Styles For Nav Items Ends Here */
 

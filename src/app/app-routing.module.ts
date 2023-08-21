@@ -4,30 +4,37 @@ import { AboutComponent } from './about/about.component';
 import { ContactMeComponent } from './contact-me/contact-me.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'homepage',
-    pathMatch: 'full'
+    redirectTo: 'home',
+    pathMatch: 'full',
   },
   {
     path: '',
-    component: HomepageComponent
-  },
-  {
-    path: 'about',
-    component: AboutComponent
-  },
-  {
-    path: 'portfolio',
-    component:PortfolioComponent
-  },
-  {
-    path:'contact-me',
-    component:ContactMeComponent
+    component: NavbarComponent,
+    children: [
+      {
+        path: 'home',
+        component: HomepageComponent
+      },
+      {
+        path: 'about',
+        component: AboutComponent
+      },
+      {
+        path: 'portfolio',
+        component:PortfolioComponent
+      },
+      {
+        path:'contact-me',
+        component:ContactMeComponent
+      }
+    ]
   }
-];
+]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
