@@ -1,0 +1,88 @@
+<mat-toolbar fxLayout="column" class="follow-scroller">
+    <button class="align-menu-icon-right" mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()"
+        fxHide.gt-sm="true">
+        <mat-icon class="hamburger-icon-size" *ngIf="!sidenav.opened">
+            menu
+        </mat-icon>
+        <mat-icon class="hamburger-icon-size" *ngIf="sidenav.opened">
+            close
+        </mat-icon>
+    </button>
+
+    <a href="https://luigiwoodhouse.azurewebsites.net"><img src="assets/new_logo.webp" class="logo-desktop" alt="developer-logo">
+    </a>
+    <nav fxHide.lt-md="true">
+
+        <ul>
+            <li><a class="btn btn-primary" (click)="closeSidenav(sidenavRef)" routerLinkActive="active" [routerLink]="['/home']">Home</a></li>
+            <li><a class="btn btn-primary" (click)="closeSidenav(sidenavRef)" routerLinkActive="active" [routerLink]="['/about']">About</a>
+            </li>
+            <li><a class="btn btn-primary" (click)="closeSidenav(sidenavRef)" routerLinkActive="active" [routerLink]="['/portfolio']">Portfolio</a></li>
+            <li><a class="btn btn-primary" (click)="closeSidenav(sidenavRef)" routerLinkActive="active" [routerLink]="['/contact-me']">Contact Me</a>
+            </li>
+        </ul>
+
+        <div class="country-name"><img src="assets/jamaica-flag-icon.WEBP" alt="jamaica-flag-picture" height=20px width=40px>
+        </div>
+    </nav>
+
+    <!--DIGITAL CLOCK SHOWING REAL TIME AND TODAY'S DATE-->
+    <div fxHide.lt-md="true">
+        <div class="date">
+            <div>Today's Date is : {{ todayWithPipe }}</div>
+        </div>
+
+        <div class="digitalTime">
+            <div>{{hour}}: &nbsp;</div>
+            <div>{{minute}}: &nbsp;</div>
+            <div>{{second}} &nbsp;</div>
+            <div class="ampm">{{ampm}}</div>
+        </div>
+    </div>
+
+    
+  <div class="country-name"><img src="assets/jamaica-flag-icon.WEBP" alt="jamaica-flag-picture" height=20px width=40px>
+  </div>
+</mat-toolbar>
+
+
+
+<mat-sidenav-container fxFlexFill>
+
+    <mat-sidenav #sidenav="matSidenav" #sidenavRef="matSidenav" class="follow-scroller">
+        <nav>
+            <ul>
+
+                <br><br><br>
+                <li><a class="btn btn-primary" (click)="closeSidenav(sidenavRef)" routerLinkActive="active" [routerLink]="['/home']">Home</a></li>
+                <li><a class="btn btn-primary" (click)="closeSidenav(sidenavRef)" routerLinkActive="active" [routerLink]="['/about']">About</a>
+                </li>
+                <li><a class="btn btn-primary" (click)="closeSidenav(sidenavRef)" routerLinkActive="active" [routerLink]="['/portfolio']">Portfolio</a></li>
+                <li><a class="btn btn-primary" (click)="closeSidenav(sidenavRef)" routerLinkActive="active" [routerLink]="['/contact-me']">Contact Me</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="date-mobile">
+            <div><b>Today's Date is </b></div>
+
+        </div>
+
+        <div class="date-mobile-2"> <b>{{ todayWithPipe }}</b></div>
+
+        <div class="digitalTime-mobile">
+            <div>{{hour}}: &nbsp;</div>
+            <div>{{minute}}: &nbsp;</div>
+            <div>{{second}} &nbsp;</div>
+            <div class="ampm-mobile">{{ampm}}</div>
+        </div>
+
+
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="background">
+            <router-outlet></router-outlet>
+        </div>
+
+
+    </mat-sidenav-content>
+</mat-sidenav-container>

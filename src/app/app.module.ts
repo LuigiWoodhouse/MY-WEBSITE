@@ -37,6 +37,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { NgParticlesModule } from "ng-particles";
 import { NgxCaptchaModule } from 'ngx-captcha';
 import { ToastrModule } from 'ngx-toastr';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 
@@ -52,7 +53,8 @@ import { ToastrModule } from 'ngx-toastr';
     PortfolioComponent,
     VideoComponent,
     ImageComponent,
-    ContactMeComponent
+    ContactMeComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
